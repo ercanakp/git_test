@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Box Model </title>
+	<style>
+	body {
+		margin:0;
+		padding:0;
+	}
+	p {
+		margin:0;
+		display:inline-block;
+	}
+
+	#mainContent {
+		position:absolute;
+		margin:0 auto;
+	}
+
+	#theBox {
+		border:1px solid #229;
+		width:400px;
+		height:200px;
+		left:20px;
+		top:20px;
+	}
+
+	#theBoxWithMargin {
+		border:5px solid #292;
+		width:400px;
+		height:200px;
+		margin:20px;
+	}
+	#theBoxWithMarginAndPadding {
+		border:5px solid #999;
+		width:400px;
+		height:200px;
+		margin:20px;
+		padding:10px;
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+		    -ms-box-sizing:content-box;
+		        box-sizing:content-box;
+	}	
+
+	/*
+	=======================================
+
+	Grid
+
+	=======================================
+	*/
+
+	*,
+	*:before,
+	*:after {
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+	}
+
+	.container {
+		  margin: 0 auto;
+		  padding-left: 30px;
+		  padding-right: 30px;
+		  width: 960px;
+	}
+
+	/*
+	  ========================================
+	  Typography
+	  ========================================
+	*/
+
+	h1, h3, h4, h5, p {
+		  margin-bottom: 22px;
+	}
+
+	/*
+	  ========================================
+	  Buttons
+	  ========================================
+	*/
+
+	.btn {
+	  border-radius: 5px;
+	  display: inline-block;
+  	  margin: 0;
+	}
+
+	.btn-alt {
+	  border: 1px solid #dfe2e5;
+	  padding: 10px 30px;
+	}
+
+	/*
+	  ========================================
+	  Home
+	  ========================================
+	*/
+
+	.hero {
+	  padding: 22px 80px 66px 80px;
+	}
+
+	</style>
+</head>
+<body>
+<header class="container">HEADER</header>
+<section class="container">
+  <h1>container</h1>
+</section>
+<section class="hero container">
+  hero container
+</section>
+<a class="btn btn-alt">Button</a>
+
+<footer class="container">FOOTER</footer>
+
+	<div id="mainContent">
+	<div id="theBox">
+		<p>Paragraf 1</p>
+
+		<p>Paragraf 2</p>
+
+		<p>Paragraf 3</p>
+	</div>
+	<div id="theBoxWithMargin">
+		<p>Paragraf 1</p>
+
+		<p>Paragraf 2</p>
+
+		<p>Paragraf 3</p>
+	</div>
+	<div id="theBoxWithMarginAndPadding">
+		<p>Paragraf 1</p>
+
+		<p>Paragraf 2</p>
+
+		<p>Paragraf 3</p>
+	</div>
+	</div>
+</body>
+</html>
